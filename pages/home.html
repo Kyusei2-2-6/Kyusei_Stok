@@ -1,0 +1,64 @@
+<div id="welcomeOverlay" class="welcome-overlay" aria-hidden="true">
+  <div class="welcome-card">
+    <div class="welcome-glow" aria-hidden="true"></div>
+    <div class="welcome-image">
+      <img src="assets/ui/welcome.png" alt="Welcome Kyusei" />
+    </div>
+    <h2 class="welcome-title">✨ Selamat Datang ✨</h2>
+    <p class="welcome-text">
+      Selamat datang di <b>Kyusei Store</b><br>
+      Silakan pilih game & akun favoritmu.
+    </p>
+    <button id="welcomeBtn" class="welcome-btn" type="button">Masuk ✨</button>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="topbar__inner">
+      <div class="topbar__left">
+        <h1 id="siteName" class="siteName">Kyusei</h1>
+        <span class="brandBadge">KYUSEI STORE</span>
+        <p class="sub">Klik produk untuk lihat detail &amp; foto</p>
+      </div>
+
+      <div class="topbar__right">
+        <div class="menu">
+          <button class="logoBtn" id="logoBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown">
+            <img src="assets/ui/logo.jpg" alt="Logo Kyusei" />
+          </button>
+
+          <div class="dropdown" id="dropdown" aria-hidden="true">
+            <button class="ddItem" data-game="all" type="button">Semua</button>
+            <button class="ddItem" data-game="genshin" type="button">Genshin Impact</button>
+            <button class="ddItem" data-game="toram" type="button">Toram Online</button>
+            <button class="ddItem" data-game="ml" type="button">Mobile Legends</button>
+          </div>
+        </div>
+
+        <div id="musicDisc" class="music-disc" title="Play / Pause Music" role="button" aria-label="Play / Pause Music"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="grid" class="grid"></section>
+</main>
+
+<div class="resumeWrap resumeBottom" id="resumeWrap" style="display:none" aria-label="Lanjutkan aktivitas terakhir">
+  <a id="resumeProduct" class="resumeChip" style="display:none" href="#">
+    <span class="resumeIco" aria-hidden="true">🧾</span>
+    <span class="resumeTxt"><b>Lanjutkan</b><small>produk terakhir</small></span>
+    <span class="resumeGo" aria-hidden="true">›</span>
+  </a>
+
+  <a id="resumePay" class="resumeChip isPrimary" style="display:none" href="#">
+    <span class="resumeIco" aria-hidden="true">💳</span>
+    <span class="resumeTxt"><b>Lanjutkan</b><small>pembayaran terakhir</small></span>
+    <span class="resumeGo" aria-hidden="true">›</span>
+  </a>
+</div>
+
+<!-- admin link (optional) -->
+<div class="wrap" style="padding:0 16px 24px"><a class="pill" href="#/admin">🛠️ Admin</a></div>

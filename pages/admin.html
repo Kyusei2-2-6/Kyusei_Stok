@@ -1,0 +1,80 @@
+<div class="wrap">
+  <header class="topbar">
+    <a class="logo" href="#/home" aria-label="Kembali ke Home">
+      <img src="./assets/ui/logo.jpg" alt="Kyusei" />
+    </a>
+    <div class="topbar-right">
+      <a class="pill" href="#/home">⬅️ Home</a>
+    </div>
+  </header>
+
+  <section class="panel">
+    <h2 class="panelTitle">Panel Stok (Bayi Mode) 🍼</h2>
+    <p class="panelHint">
+      Ini halaman khusus buat kamu buat update stok dari HP/Laptop.
+      Data tersimpan di <b>browser kamu</b> (localStorage). Kamu bisa export CSV/JSON.
+    </p>
+
+    <div class="cardBox">
+      <label class="lbl">Link Google Sheets CSV (Publish to web)</label>
+      <input id="sheetUrl" class="inp" placeholder="Tempel link CSV di sini..." />
+      <div class="row">
+        <button id="saveSheet" class="btn">Simpan Link</button>
+        <button id="testSheet" class="btn ghost">Tes Ambil Data</button>
+      </div>
+      <small class="small" id="sheetStatus"></small>
+    </div>
+
+    <div class="cardBox">
+      <h3 class="h3">Tambah / Edit Produk</h3>
+      <div class="grid2">
+        <div>
+          <label class="lbl">Code</label>
+          <input id="f_code" class="inp" placeholder="A001" />
+        </div>
+        <div>
+          <label class="lbl">Game (genshin/ml/toram/other)</label>
+          <input id="f_game" class="inp" placeholder="genshin" />
+        </div>
+        <div>
+          <label class="lbl">Nama</label>
+          <input id="f_name" class="inp" placeholder="Akun Sultan..." />
+        </div>
+        <div>
+          <label class="lbl">Harga (angka)</label>
+          <input id="f_price" class="inp" placeholder="150000" />
+        </div>
+      </div>
+
+      <label class="lbl">Foto Cover (URL gambar)</label>
+      <input id="f_img" class="inp" placeholder="https://.../1.jpg" />
+
+      <label class="lbl">Deskripsi</label>
+      <textarea id="f_desc" class="inp ta" placeholder="Isi detail akun..."></textarea>
+
+      <div class="row">
+        <label class="chk"><input id="f_sold" type="checkbox" /> SOLD</label>
+        <button id="addBtn" class="btn">Simpan Produk</button>
+        <button id="resetBtn" class="btn ghost">Kosongkan Form</button>
+      </div>
+
+      <small class="small">Tips bayi: simpan gambar di hosting gambar (misal GitHub repo / Imgur / Cloudinary). Link harus bisa dibuka publik.</small>
+    </div>
+
+    <div class="cardBox">
+      <h3 class="h3">Daftar Produk</h3>
+      <div class="row">
+        <button id="exportCsv" class="btn">Export CSV</button>
+        <button id="exportJson" class="btn ghost">Export JSON</button>
+        <button id="importJson" class="btn ghost">Import JSON</button>
+        <button id="clearAll" class="btn danger">Hapus Semua</button>
+      </div>
+      <textarea id="exportOut" class="inp ta" placeholder="Hasil export akan muncul di sini..."></textarea>
+      <div class="row">
+        <button id="copyOut" class="btn ghost">Copy</button>
+      </div>
+
+      <div id="tableWrap"></div>
+    </div>
+  </section>
+</div>
