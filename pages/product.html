@@ -1,0 +1,68 @@
+<!-- =========================
+     PRODUCT PAGE (Injected by router)
+========================= -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="topbar__inner topbar__inner--product">
+      <a class="btn small" href="#/home">← Kembali</a>
+
+      <div class="topbar__text grow">
+        <h1 id="prodName">Produk</h1>
+        <p class="sub" id="prodMeta"></p>
+      </div>
+
+      <div class="topbar__actions row" style="gap:10px;">
+        <div id="musicDisc" class="music-disc" title="Play / Pause Music"></div>
+        <a id="buyBtn" class="btn primary small" href="#">Beli</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <img id="heroImg" class="heroImg" alt="Foto produk">
+  </div>
+
+  <div class="productActions">
+    <button id="openLightboxBtn" class="btn" type="button">Lihat Foto (Slide)</button>
+    <button id="detailBtn" class="btn" type="button">Detail</button>
+    <a id="buyBtn2" class="btn primary" href="#">Beli</a>
+  </div>
+
+  <h2 class="h2">Foto lainnya</h2>
+  <div id="thumbs" class="thumbs"></div>
+
+  <p class="sub productHint">
+    Tips: klik foto untuk popup, lalu geser kiri/kanan (atau swipe).
+  </p>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="iconBtn lbClose" id="lbClose" aria-label="Tutup" type="button">✕</button>
+  <button class="iconBtn lbPrev" id="lbPrev" aria-label="Sebelumnya" type="button">‹</button>
+
+  <img id="lbImg" class="lbImg" alt="Preview">
+
+  <button class="iconBtn lbNext" id="lbNext" aria-label="Berikutnya" type="button">›</button>
+  <div class="lbCaption" id="lbCaption"></div>
+</div>
+
+<div class="modal" id="detailModal" aria-hidden="true">
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="modal__head">
+      <div>
+        <div class="modal__title" id="detailTitle">Detail Akun</div>
+        <div class="modal__sub" id="detailSub"></div>
+      </div>
+      <button class="modal__close" id="detailClose" aria-label="Tutup" type="button">✕</button>
+    </div>
+
+    <div class="modal__body">
+      <ul class="detailList" id="detailList"></ul>
+      <div class="modal__empty" id="detailEmpty" style="display:none;">
+        Detail belum diisi.
+      </div>
+    </div>
+  </div>
+</div>
